@@ -1,0 +1,8 @@
+services:
+    vaterlangen_latex:
+        class: vaterlangen\LatexBundle\Processor\LatexProcessor
+        arguments: ['@service_container']
+    vaterlangen_latex.twig.latex.filter:
+        class: vaterlangen\LatexBundle\Twig\LatexExtension
+        tags:
+            - { name: twig.extension }
